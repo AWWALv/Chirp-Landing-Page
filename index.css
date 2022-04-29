@@ -139,6 +139,7 @@ button h3{
 .join{
     font-size: 1.1em; 
     margin: 20px 0px 20px 20px; 
+    padding-bottom: 20px;
 }
 .color{
     color:rgb(0, 160, 235);
