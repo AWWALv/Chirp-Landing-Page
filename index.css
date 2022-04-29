@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    position: relative;
+}
+.hero-color{
+    background-color: rgb(241, 239, 224);
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.logo{
+    font-size: 2em;
+    padding: 20px;
+    color: rgb(0, 160, 235);
+   
+}
+.Hamburger{
+    width: 2em;
+    position: absolute;
+    right:20px;
+    color: white;
+}
+.nav{
+    position: absolute;
+    top:2%;
+    left:10% ;
+    z-index: 1;
+}
+.nav-ul{
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 2em;
+    transform: scale(0);
+    width: 80vw;
+    background-color: black;
+    transform-origin: top right;
+    transition: transform 0.5s ease-in-out;
+    
+}
+main{
+   z-index: -2000;
+    
+}
+.nav-ul.show{
+    transform: scale(1);
+}
+.nav-ul li{
+    margin: 30px;
+}
+.nav-ul li a{
+    color: rgb(146, 141, 141);
+    transition: 0.5s ease-in-out;
+}
+.nav-ul li a:hover{
+    border: 1px solid black;
+    color:white;
+    background-color: black;
+    border-radius: 10px;
+}
+button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 160, 235);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;   
+    margin: 20px auto;
+    transition: transform 0.5s ease-in-out;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.0);
+}
+button h3{
+    color: white;
+    padding: 0px 15px;
+    font-size: 1.5em;
+}
+.fa-times{
+    position: absolute;
+    top:20px;
+    right:10px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+}
+.hero{
+    position: relative;
+}
+.hero-div{
+    background-image: url(./Assets/Hero\ Image\ \(Desktop\ View\).png);
+    height: 85vh;
+    background-size: 100%;
+    margin: 20px;
+    background-repeat: no-repeat;
+}
+.hero-div-text{
+    margin: 20px;
+}
+.hero-div-text h2{
+    margin: 20px 0px;
+}
+.hero-div-text p{
+    line-height: 1.2;
+    color: rgb(131, 130, 130);
+}
+.hero-div-button{
+    margin: 20px auto;
+    width: 90%;
+    justify-content: center;
+}
+.learn-more{
+    font-size: 1.2em;
+    text-align: center;
+    color: rgb(0, 160, 235);
+}
+.stacked-imgs{
+    display: flex;  
+    margin: 20px 35px;
+}
+.stacked-imgs img{
+    margin-left: -20px;
+}
+.join{
+    font-size: 1.1em; 
+    margin: 20px 0px 20px 20px; 
+}
+.color{
+    color:rgb(0, 160, 235);
+}
+#Features{
+    background-color: white;  
+}
+.features{
+    padding-top: 20px;
+}
+.features h1{
+    margin: 0px 0px 20px 20px;
+}
+.main-feature-box{
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+.features-box{
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#features-dark-box h2{
+    margin: 20px 0px 0px 0px;
+}
+#features-dark-box.dark{
+    background-color:black ;
+}
+#features-dark-box.dark h2{
+    color:white;
+}
+#features-dark-box.dark p{
+    color:white;
+}
+.features-box p{
+    color: rgb(131, 130, 130);
+    line-height: 1.3;
+
+}
+.fa-chart-line{
+    font-size: 2em;  
+    width: 10%;
+    color: red;
+    border: none;
+}
+.label{
+    width: 50px;
+    height: 26px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap:5px;
+    position: relative;
+    border-radius: 50px; 
+    transform: scale(1.3); 
+   
+}
+.ball{
+    position: absolute;
+    width: 23px;
+    height: 22px;
+    top:2px;
+    left:2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform  0.25s linear;
+}
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+.fa-moon{
+    color: #f1c40f; 
+}
+.fa-sun{
+    color:#f39c12;
+}
+.customer{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+}
+.customer-section{
+    background-color: rgb(195, 227, 235);
+    padding: 30px 0px;
+}
+.customer-section h1{
+    font-size: 2em;
+    margin-left: 20px;
+    padding: 20px;
+}
+.customer h3{
+    margin: 20px 10px;
+    font-weight: 500;
+    color: rgb(131, 130, 130);
+}
+.profile-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-area-handle{
+    display: flex;
+    align-items: center;
+}
+.profile-area-handle img{
+    width: 4em;
+}
+.handle{
+    font-size: 0.7em;
+    color: rgb(131, 130, 130);
+}
+.profile-like-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-like-date-jack{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-like{
+    display: flex;
+    gap:10px;
+}
+.price-section{
+    text-align: center;
+    margin: 50px 0px;
+}
+.price-section p{
+    margin: 5px 20px;
+}
+.price-plan{
+    padding: 30px 30px;
+    border: 1px solid coral;
+    border-radius: 10px;
+    margin: 50px 20px;
+    text-align: center;
+    background-color: rgb(247, 245, 241);
+}
+.monthly{
+    text-align: justify;
+}
+.price-month{
+    display: flex;
+    align-items: flex-end;
+}
+hr{
+    margin: 0px 10px;
+    border: 0.5px solid grey;
+}
+.Checkmark{
+    display: flex;
+    align-items:flex-start;
+    gap:5px;
+    justify-content:first baseline;
+    margin: 40px 0px;
+}
+.Checkmark h3{
+    color: rgb(131, 130, 130); 
+}
+.real-Checkmark{
+    width: 2em;
+}
+footer{
+    background-color: rgb(195, 227, 235);
+    padding: 10px 0px 20px 0px;
+}
+.footer-links{
+    display: flex;
+    justify-content: space-around;
+}
+footer a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color:black;
+    font-weight: 500;
+}
+@media screen and (min-width:600px) and (max-width:800px){
+    header{
+        flex-wrap: nowrap;
+        position: relative;
+    }
+    .logo{
+        font-size: 3em;
+        margin: 20px 0px 0px 0px;
+        color: rgb(0, 160, 235);
+       
+    }
+    .nav{
+        position: absolute;
+        top:0%;   
+        left: 19%;
+        display: flex; 
+    }
+
+    .Hamburger{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .nav-ul{
+        width: 100%;
+        border: none;
+        text-align: center;
+        display: flex;
+        font-size: 1.5em;
+        background-color: transparent;  
+        transform: scale(1);
+    }
+    .nav-ul li a:hover{
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: transparent;
+        border-radius: 0px;
+        color: black;
+        transform: scaleY(1.5);
+    }
+    button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(0, 160, 235);
+        border: none;
+        padding: 0px 10px;
+        border-radius: 10px;
+    }
+    button h3{
+        color: white;
+        padding: 0px 10px;
+        font-size: 1.5em;
+    }
+    .fa-times{
+        visibility: hidden;
+        display: none;
+    }
+    .hero-div{
+        background-image: url(./Assets/Hero\ Image\ \(Tablet\ View\).png);
+        height: 80vh;
+        background-size: contain;
+        background-position: center;
+        width: 93vw;
+        background-repeat: no-repeat;
+    }
+    .hero-div-text h2{
+        font-size: 3em;
+        margin-left: 20px;
+    }
+    .hero-div-text p{
+        line-height: 1.2;
+        color: rgb(187, 182, 182);
+        font-size: 1.2em;
+        font-weight: 200;
+        margin: 20px 0px 0px 20px;
+    }
+    .hero-div-button{
+        margin: 10px 15px 10px 20px;
+        width: 60%;
+        padding: 20px;
+        justify-content: center;
+    }
+    .learn-more{
+        font-size: 1.2em;
+        text-align: justify;
+        margin: 20px 0px 0px 20px;
+    }
+    .stacked-imgs{
+        display: flex;  
+        margin: 20px 55px;
+    }
+    .main-feature-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+        margin-bottom: 20px;
+    }
+    .fa-chart-line{
+        font-size: 3em;  
+        
+        width: 10%;
+        color: red;
+        border: none;
+    }
+
+    .join{
+        font-size: 1.1em; 
+        margin: 20px 0px 20px 40px; 
+        padding-bottom: 30px;
+    }
+    .price-section{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    button{
+        padding: 15px 15px;
+    }
+}
+
+@media screen and (min-width:810px) and (max-width:1200px){
+    header{
+        flex-wrap: nowrap;
+        position: relative;
+    }
+    .logo{
+        font-size: 3em;
+        margin: 20px 0px 0px 20px;
+        color: rgb(0, 160, 235);
+       
+    }
+    .nav{
+        position: absolute;
+        top:0%;   
+        left: 33%;
+        display: flex;
+    }
+
+    .Hamburger{
+        display: none;
+        top:30%;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .nav-ul{
+        width: 100%;
+        border: none;
+        text-align: center;
+        display: flex;
+        background-color: transparent;
+        font-size: 2em;  
+        transform: scale(1);
+    }
+    .nav-ul li a:hover{
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: transparent;
+        border-radius: 0px;
+        color: black;
+        transform: scaleY(1.5);
+    }
+    .fa-times{
+        visibility: hidden;
+        display: none;
+    }
+    .hero{
+        display: block;
+    }
+    .hero-div{
+        background-image: url(./Assets/Hero\ Image\ \(Tablet\ View\).png);
+        height: 100vh;
+        background-size: contain;
+        background-position: center;
+        width: 95vw;
+        background-repeat: no-repeat;
+        
+    }
+    .hero-div-button{
+        margin: 20px 15px 20px 0px;
+        width: 40%;
+        justify-content: center;
+    }
+    .hero-div-button-learn{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .stacked-imgs{
+      margin: 30px 50px;
+    }
+    .join{
+        font-size: 1.1em; 
+       padding-bottom: 30px;
+    }
+    .features{
+        margin: 50px 100px 20px 90px;
+    }
+    .price-section{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    header{
+        flex-wrap: nowrap;
+        position: relative;
+    }
+    .logo{
+        font-size: 3em;
+        margin: 20px 0px 0px 100px;
+        color: rgb(0, 160, 235);
+       
+    }
+    button{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(0, 160, 235);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 10px;   
+        margin: 20px auto;
+        transition: transform 0.5s ease-in-out;
+    }
+    .nav{
+        position: absolute;
+        top:0%;   
+        left: 50%;
+        display: flex; 
+    }
+
+    .Hamburger{
+        display: none;
+        top:30%;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .nav-ul{
+        width: 100%;
+        border: none;
+        text-align: center;
+        display: flex;
+        font-size: 1.5em;  
+        transform: scale(1);
+        background-color: transparent;
+    }
+    .nav-ul li{
+        margin: 30px;
+    }
+    .nav-ul li a:hover{
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: transparent;
+        border-radius: 0px;
+        color: black;
+        transform: scaleY(1.5);
+    }
+    .fa-times{
+        visibility: hidden;
+        display: none;
+    }
+    .hero{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .hero-div{
+        background-image: url(./Assets/Hero\ Image\ \(Desktop\ View\).png);
+        height: 80vh;
+        background-size: contain;
+        background-position: 80%;
+        margin-right: 100px;
+        width: 70vw;
+        background-repeat: no-repeat;
+    }
+    .hero-div-text{
+        margin-left: 110px;
+        width:40vw ;
+    }
+    .hero-div-text h2{
+        font-size: 3em;
+    }
+    .hero-div-text p{
+        line-height: 1.3;
+        color: rgb(131, 130, 130);
+        font-size: 1.5em;
+        font-weight: 200;
+        margin: 20px 0px;
+    }
+    .hero-div-button{
+        margin: 10px 15px 10px 0px;
+        width: 60%;
+        justify-content: center;
+    }
+    .stacked-imgs{
+        position: absolute;
+        display: flex;
+        top:70%;
+        left:10%;  
+    }
+    .stacked-imgs img{
+        margin-left: -20px;
+    }
+    .join{
+        position: absolute;
+        top:80%;
+        left:5%;
+        font-size: 1.3em;
+        color: rgb(131, 130, 130);
+    }
+    .hero-div-button-learn{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .features{
+        margin: 50px 150px 100px 90px;
+    }
+    .main-feature-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+    }
+    .features h1{
+        margin: 0px 0px 20px 20px;
+        font-size: 2em;
+    }
+    .features-box{
+        padding: 50px;
+        margin-bottom: 60px;
+    }
+    #features-dark-box h2{
+        margin: 20px 0px 0px 0px;
+    }
+    #features-dark-box.dark h2{
+        color:white;
+    }
+    #features-dark-box.dark p{
+        color:white;
+    }
+    .features-box p{
+        color: rgb(131, 130, 130);
+        line-height: 1.5;
+        font-size: 1.2em;
+    
+    }
+    .customer-section{
+        background-color: rgb(195, 227, 235);
+       
+      
+    }
+    .customer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr  1fr;
+        margin: 0px 20px;
+        
+
+    }
+    #jack{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        padding: 40px;
+    
+    }
+    .profile-like-date-jack{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 20px;
+    }
+    .price-section{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    footer{
+        padding: 10px 0px 30px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-links{
+        display: flex;
+        justify-content: right;
+        gap:50px;
+        margin-right: 30px;
+    }
+    footer a{
+        font-size: 1.5em;
+        transition: 0.5s ease-in-out;
+    }
+    footer a:hover{
+        transform: scale(1.1);
+    }
+     
+ 
+}
